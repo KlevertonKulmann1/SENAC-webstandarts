@@ -1,0 +1,244 @@
+:root{
+    --primary:#202632;
+    --secondary:#ED38FF;
+    --tertiary:#090B0A;
+    --bg-color:#121212;
+    --text-color:#FFFDFE;
+    --emphasys-color:#D281F9;
+    --gradient-color-1:linear-gradient(to bottom, #45134D 0%, #7D4367 100%);
+    --gradient-color-2:linear-gradient(to bottom, #080A0B 0%, #202632 100%);
+    --gradient-color-3:linear-gradient(to bottom, #202632 0%, #080A0B 100%);
+    --gradient-color-4:linear-gradient(to bottom, #1C1F3E 0%, #343D69 100%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:"Roboto", sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--primary);
+}
+.container{
+    max-width: 1392px;
+    margin: auto;
+}
+.grid{
+    display: grid;
+    min-height: inherit;
+    padding: 8rem 0;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 100%;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+h1,h2,h3,h4,p{
+    text-align: center;
+    color: var(--text-color);
+}
+
+.emfase{
+    color: var(--emphasys-color);
+}
+.emfase-2{
+    font-weight: 600!important;
+}
+.btn {
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    width: fit-content;
+    border-radius: 4rem;
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+    gap: .5rem;
+    padding: 1.5rem 2.5rem;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
+    border: .1rem solid var(--secondary);
+    &.btn-primary{
+        background-color: var(--secondary);
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .icon{
+        display: inline-flex;
+        width: 2.5rem;
+    }
+}
+.mt{
+    margin-top: 2rem;
+}
+.mb {
+    margin-bottom: 2rem;
+}
+
+header{
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(./imgs/hero-img.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-section{
+    justify-self: flex-end;
+    align-self: center;
+    max-width: 70rem;
+    width: 100%;
+    text-align: center;
+}
+.subtext{
+    max-width: 38rem;
+    width: 100%;
+    margin: 3rem auto;
+}
+section{
+    width: 100%;
+    min-height: 30vh;
+    padding: 3.5rem 0;
+    text-align: center;
+    &.bg-gradient-1{
+        background-image: var(--gradient-color-1);
+    }
+    &.bg-gradient-2{
+        background-image: var(--gradient-color-2);
+    }
+    &.bg-gradient-3{
+        background-image: var(--gradient-color-3);
+    }
+    &.bg-gradient-4{
+        background-image: var(--gradient-color-4);
+    }
+    .subtext{
+        max-width: 85%;
+        margin: .5rem auto;
+        font-weight: 100;
+    }
+    .cards-box{
+        padding: 5rem 0;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        .card{
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                max-width: 15rem;
+                margin: auto;
+            }
+            .text{
+                max-width: 30rem;
+                margin: auto;
+            }
+            &.card-1{
+                width: 30%;
+                height: 40rem;
+                background-image: var(--gradient-color-1);
+            }
+            &.card-2{
+                width: 22%;
+                height: 27rem;
+                background-color: transparent;
+                border: .3rem solid var(--primary);
+                box-shadow: 0 0 .5rem #00000044;
+            }
+        }
+
+        
+    }
+    .embed-video{
+        max-width: 55rem;
+        margin: 4rem auto;
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+@media screen and (max-width:1024px) {
+    section {
+        & .cards-box {
+            & .card {
+                &.card-1,
+                &.card-2 {
+                    width: 45%;
+                }
+                .text{
+                    max-width: 80%;
+                    width: 100%;
+                }
+            }
+        }
+        .descricao{
+            flex-flow: column;
+        }
+    }
+}
+
+@media screen and (max-width:512px) {
+    section {
+        & .cards-box {
+            & .card {
+                &.card-1,
+                &.card-2 {
+                    width: 90%;
+                }
+                .text{
+                    max-width: 80%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:435px) {
+    .text-section,
+    footer div{
+        padding: 0 1rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+    h4{
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+}
