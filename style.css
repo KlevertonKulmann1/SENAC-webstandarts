@@ -47,14 +47,15 @@ h1{
 h2{
     font-size: 4rem;
 }
-h3{
+h3,label{
     font-size: 2rem;
 }
 h4{
     font-weight: 100;
     font-size: 1.5rem;
 }
-h1,h2,h3,h4,p{
+
+h1,h2,h3,h4,p,label{
     text-align: center;
     color: var(--text-color);
 }
@@ -179,7 +180,34 @@ section{
         margin: 4rem auto;
     }
 }
-
+form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: 3rem;
+    width: 90%;
+    margin: 2rem auto;
+    div{
+        flex: 1;
+    }
+    label{
+        display: block;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    input{
+        width: 100%;
+        font-size: 3rem;
+        border-radius: 4rem;
+        border: .2rem solid var(--text-color);
+        color: var(--text-color);
+        padding: .9rem 2rem;
+        background-color: transparent;
+    }
+    .btn{
+        margin-bottom: 0;
+    }
+}
 footer{
     width: 100%;
     padding: 6rem 0;
